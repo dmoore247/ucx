@@ -123,7 +123,9 @@ def test_client_for_workspace():
     os.environ.pop('DATABRICKS_HOST', None)
     os.environ.pop('DATABRICKS_TOKEN', None)
     os.environ.pop('DATABRICKS_CONFIG_PROFILE', None)
-    
+    os.environ.pop('DATABRICKS_CLUSTER_ID', None)
+    os.environ.pop('DATABRICKS_USERNAME', None)
+
     wrksp = Workspaces(
         AccountConfig(
             connect=ConnectConfig(
