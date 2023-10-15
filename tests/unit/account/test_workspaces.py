@@ -119,12 +119,13 @@ def test_list_azure_workspaces(arm_requests):
 
 def test_client_for_workspace():
     import os
+
     # remove user provided credentials
-    os.environ.pop('DATABRICKS_HOST', None)
-    os.environ.pop('DATABRICKS_TOKEN', None)
-    os.environ.pop('DATABRICKS_CONFIG_PROFILE', None)
-    os.environ.pop('DATABRICKS_CLUSTER_ID', None)
-    os.environ.pop('DATABRICKS_USERNAME', None)
+    os.environ.pop("DATABRICKS_HOST", None)
+    os.environ.pop("DATABRICKS_TOKEN", None)
+    os.environ.pop("DATABRICKS_CONFIG_PROFILE", None)
+    os.environ.pop("DATABRICKS_CLUSTER_ID", None)
+    os.environ.pop("DATABRICKS_USERNAME", None)
 
     wrksp = Workspaces(
         AccountConfig(
